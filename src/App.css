@@ -1,7 +1,36 @@
-.flagStyle {
-  width: "100px";
-  height: "100px";
-};
+.inputSearch {
+  margin: 20px;
+  width: 500px;
+}
 
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
 
+.gridContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.countryCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 200px;
+}
+
+.flag {
+  width: 100px;
+  height: 100px;
+}
 

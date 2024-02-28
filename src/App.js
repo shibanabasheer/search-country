@@ -16,58 +16,27 @@ export default function App() {
     setSearchTerm(e.target.value.toLowerCase().trim());
   };
 
-  const flagStyle = {
-    width: "100px",
-    height: "100px",
-  };
-
-  const containerStyle = {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    height: "100vh",
-  };
-
-  const gridContainerStyle = {
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "center",
-    alignItems: "center",
-  };
-
-  const countryCard = {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    margin: "10px",
-    padding: "10px",
-    border: "1px solid #ccc",
-    borderRadius: "10px",
-    width: "200px",
-  };
-
   // Filter countries based on search term
   const filteredCountries = countries.filter((country) =>
     country.name.common.toLowerCase().includes(searchTerm)
   );
 
   return (
-    <div style={containerStyle}>
+    <div className="container">
       <input
         type="text"
         placeholder="Search countries..."
         value={searchTerm}
         onChange={handleSearch}
-        style={{ margin: "20px", width: "500px" }}
+        className="inputSearch"
       />
-      <div style={gridContainerStyle}>
+      <div className="gridContainer">
         {filteredCountries.map((country) => (
-          <div key={country.cca3} style={countryCard}>
+          <div key={country.cca3} className="countryCard">
             <img
               src={country.flags.png}
               alt={`Flag of ${country.name.common}`}
-              style={flagStyle}
+              className="flag"
             />
             <h2>{country.name.common}</h2>
           </div>
