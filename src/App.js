@@ -28,14 +28,14 @@ export default function App() {
     height: "100vh",
   };
 
-  const countryCard = {
+  const gridContainerStyle = {
     display: "flex",
     flexWrap: "wrap",
     justifyContent: "center",
     alignItems: "center",
   };
 
-  const cardStyle = {
+  const countryCard = {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
@@ -61,9 +61,9 @@ export default function App() {
         onChange={handleSearch}
         style={{ margin: "20px", width: "500px" }}
       />
-      <div style={countryCard}>
+      <div style={gridContainerStyle}>
         {filteredCountries.map((country) => (
-          <div key={country.cca3} style={cardStyle}>
+          <div key={country.cca3} style={countryCard}>
             <img
               src={country.flags.png}
               alt={`Flag of ${country.name.common}`}
